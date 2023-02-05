@@ -12,4 +12,4 @@ Custom commands: cypress\support\commands.js <br>
 
 Steps to start the project:<br>
 1. Clone the repo <br>
-2. Run the tests with "npxcypress run" <br>
+2. Run the tests with "npx cypress run" <br>
