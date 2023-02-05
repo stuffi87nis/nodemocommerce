@@ -1,4 +1,4 @@
-export {registrationElements, messageElements, loginElements}
+export {registrationElements, messageElements, loginElements, itemElements}
 
 const registrationElements = {
     registrationLink : ".ico-register",
@@ -30,4 +30,12 @@ const messageElements = {
 const loginElements = {
     loginLink : '.ico-login',
     loginButton : '.login-button'
+}
+
+const itemElements = {
+    computerHref : '[href="/computers"]',
+    desktopHref : '[href="/desktops"]',
+    elementForSortingItems : '#products-orderby',
+    elementForVisualDisplay : '#products-pagesize',
+    productItem : '.product-item'
 }

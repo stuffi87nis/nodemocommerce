@@ -1,9 +1,3 @@
-//function
-import {
-    successfulRegistrationTest,
-
-} from "../testFunctions/registrationFunctions"
-
 //POM
 import {
     registrationElements,
