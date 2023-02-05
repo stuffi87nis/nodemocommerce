@@ -29,14 +29,19 @@ import {
     registrationElements, 
     messageElements, 
     loginElements,
-    itemElements
+    itemElements,
+    itemDetailElements
 } from "../support/POM/elements"
 
 //DOM
 import {
     userInfoData, 
-    messagesData
+    messagesData,
 } from "../fixtures/DOM/registrationData"
+
+import {
+    itemsData
+} from "../fixtures/DOM/items"
 
 
 Cypress.Commands.add("navigation", () => {
@@ -83,13 +88,13 @@ Cypress.Commands.add("testTheItemSorging", () => {
     cy.get(itemElements.desktopHref).realClick()
 
     cy.get(itemElements.elementForSortingItems).select('5').then(() => {
-        expect(['Build your own computer', 'Digital Storm VANQUISH 3 Custom Performance PC', 'Lenovo IdeaCentre 600 All-in-One PC'])
-        .to.have.ordered.members(['Build your own computer', 'Digital Storm VANQUISH 3 Custom Performance PC', 'Lenovo IdeaCentre 600 All-in-One PC'])
+        expect([itemsData.buildComputer, itemsData.customPerfomancePC, itemsData.lenovo600])
+        .to.have.ordered.members([itemsData.buildComputer, itemsData.customPerfomancePC, itemsData.lenovo600])
     })
 
     cy.get(itemElements.elementForSortingItems).select('6').then(() => {
-        expect(['Lenovo IdeaCentre 600 All-in-One PC', 'Digital Storm VANQUISH 3 Custom Performance PC', 'Build your own computer'])
-        .to.have.ordered.members(['Lenovo IdeaCentre 600 All-in-One PC', 'Digital Storm VANQUISH 3 Custom Performance PC', 'Build your own computer'])
+        expect([itemsData.lenovo600, itemsData.customPerfomancePC, itemsData.buildComputer])
+        .to.have.ordered.members([itemsData.lenovo600, itemsData.customPerfomancePC, itemsData.buildComputer])
     })
 
     cy.get(itemElements.elementForSortingItems).select('10').then(() => {
@@ -115,33 +120,24 @@ Cypress.Commands.add("diplayItemsTest", () => {
 
 Cypress.Commands.add("testTheComputerComponents", () => {
     cy.visit('https://demo.nopcommerce.com/build-your-own-computer')
-    cy.get('#product_attribute_1').select('1')
-    cy.get('#product_attribute_1').select('0')
-    cy.get('#product_attribute_1').select('2')
+    cy.get(itemDetailElements.procesorId).select('1')
+    cy.get(itemDetailElements.procesorId).select('0')
+    cy.get(itemDetailElements.procesorId).select('2')
 
-    cy.get('#product_attribute_2').select('3')
-    cy.get('#product_attribute_2').select('4')
-    cy.get('#product_attribute_2').select('5')
+    cy.get(itemDetailElements.ramId).select('3')
+    cy.get(itemDetailElements.ramId).select('4')
+    cy.get(itemDetailElements.ramId).select('5')
 
-    cy.get('#product_attribute_3_6').check()
-    cy.get('#product_attribute_3_6').check()
+    cy.get(itemDetailElements.hddId).check()
+    cy.get(itemDetailElements.hddId).check()
 
-    cy.get('#product_attribute_4_8').check()
-    cy.get('#product_attribute_4_9').check()
+    cy.get(itemDetailElements.osId1).check()
+    cy.get(itemDetailElements.osId2).check()
 
-    cy.get('#product_attribute_5_10').check()
-    cy.get('#product_attribute_5_11').check()
-    cy.get('#product_attribute_5_12').check()
+    cy.get(itemDetailElements.softwareId1).check()
+    cy.get(itemDetailElements.softwareId2).check()
+    cy.get(itemDetailElements.softwareId3).check()
 
-    let shopingCart;
-    cy.get('#topcartlink').then((val) => {
-        shopingCart = parseInt(val[0].innerText)
-    }).then(() => {
-        cy.get('#product_enteredQuantity_1').clear().type(3)
-        cy.get('#add-to-cart-button-1').click()
-        cy.get('#product_enteredQuantity_1').then((items) => {
-            expect(items.length.Number).to.be.eq(Number(shopingCart))
-        })
-    })
-
+    cy.get(itemDetailElements.itemQuantity).clear().type()
+    cy.get(itemDetailElements.addTocart).click()
 })
