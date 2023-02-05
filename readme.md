@@ -1,15 +1,15 @@
 #Basic tests for the online shop <br>
 
-Test tool: Cypress 
-Project name: nopcommerce basic URL: https://demo.nopcommerce.com/
+Test tool: Cypress <br>
+Project name: nopcommerce basic URL: https://demo.nopcommerce.com/ <br>
 
 
-UI tests: cypress: cypress\e2e\ui_tests
-POM: cypress\support\POM
-DOM:cypress\fixtures\DOM
-Custom commands: cypress\support\commands.js
+UI tests: cypress: cypress\e2e\ui_tests <br>
+POM: cypress\support\POM <br>
+DOM:cypress\fixtures\DOM <br>
+Custom commands: cypress\support\commands.js <br>
 
 
-Steps to start the project:
-1. Clone the repo 
-2. Run the tests with "npxcypress run"
+Steps to start the project:<br>
+1. Clone the repo <br>
+2. Run the tests with "npxcypress run" <br>
