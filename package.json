@@ -1,0 +1,26 @@
+{
+  "name": "nopcommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stuffi87nis/nopCommerce.git"
+  },
+  "author": "stefan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stuffi87nis/nopCommerce/issues"
+  },
+  "homepage": "https://github.com/stuffi87nis/nopCommerce#readme",
+  "dependencies": {
+    "cypress": "^12.5.1",
+    "cypress-real-events": "^1.7.6"
+  },
+  "devDependencies": {
+    "cypress-v10-preserve-cookie": "^1.2.1"
+  }
+}
