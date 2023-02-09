@@ -1,7 +1,8 @@
 Basic tests for the online shop <br>
 
 Test tool: Cypress <br>
-Project name: nopcommerce basic URL: https://demo.nopcommerce.com/ <br>
+Project name: nopcommerce  <br>
+basic URL: https://demo.nopcommerce.com/ <br>
 
 
 UI tests: cypress: cypress\e2e\ui_tests <br>
