@@ -5,7 +5,7 @@ export {userInfoData, messagesData}
 const userInfoData = {
     firstNameData : 'Stefan',
     lastNameData : 'Jevtovic',
-    emailData : 'stefanjevtoccv@gmail.com',
+    emailData : 's15g22222sss5ccv@gmail.com',
     companyData : 'home',
     passwordData : 'stefan123',
     repeartPasswordData : 'stefan123',

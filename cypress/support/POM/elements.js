@@ -41,7 +41,7 @@ const itemElements = {
 }
 
 const itemDetailElements = {
-    processorId : '#product_attribute_1',
+    processorId : '#product_attribute_1', 
     ramId : '#product_attribute_2',
     hddId : '#product_attribute_3_6',
     osId1 : '#product_attribute_4_8',
@@ -50,5 +50,7 @@ const itemDetailElements = {
     softwareId2 : '#product_attribute_5_11',
     softwareId3 : '#product_attribute_5_12',
     itemQuantity : '#product_enteredQuantity_1',
-    addTocart : '#add-to-cart-button-1'
+    addTocart : '#add-to-cart-button-1',
+    popMessageSuccess : '.content',
+    linkInSucessMessage : '.content > a'
 }
